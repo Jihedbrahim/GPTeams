@@ -1,0 +1,52 @@
+{
+  "name": "chatgpt-web-service",
+  "version": "1.0.0",
+  "private": false,
+  "description": "ChatGPT Web Service",
+  "author": "ChenZhaoYu <chenzhaoyu1994@gmail.com>",
+  "keywords": [
+    "chatgpt-web",
+    "chatgpt",
+    "chatbot",
+    "express"
+  ],
+  "engines": {
+    "node": "^16 || ^18 || ^19"
+  },
+  "scripts": {
+    "test": "jest --coverage",
+    "start": "esno ./src/index.ts",
+    "dev": "esno watch ./src/index.ts",
+    "prod": "node ./build/index.mjs",
+    "build": "yarn cache clean && tsup",
+    "clean": "rimraf build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "common:cleanup": "rimraf node_modules && rimraf yarn.lock"
+  },
+  "dependencies": {
+    "chatgpt": "^5.0.10",
+    "connect-history-api-fallback": "^2.0.0",
+    "dotenv": "^16.0.3",
+    "esno": "^0.16.3",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.5.0",
+    "https-proxy-agent": "^5.0.1",
+    "isomorphic-fetch": "^3.0.0",
+    "node-fetch": "^3.3.0",
+    "rate-limiter-flexible": "^2.4.1",
+    "socks-proxy-agent": "^7.0.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.35.3",
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.14.6",
+    "eslint": "^8.35.0",
+    "jest": "^29.5.0",
+    "rimraf": "^4.3.0",
+    "ts-jest": "^29.0.5",
+    "tsup": "^6.6.3",
+    "typescript": "^4.9.5"
+  }
+}
